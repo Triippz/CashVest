@@ -1,0 +1,72 @@
+/*
+ * Copyright 2020 Mark Tripoli
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ * documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+ * persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+.body {
+    -fx-background-color: #0A014F;
+}
+
+.body-header {
+    -fx-background-color: #0A014F;
+}
+
+.page-title {
+    -fx-text-fill: #fbfafa;
+}
+
+.button {
+    -fx-background-color: WHITE;
+}
+
+.noheader .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-background-color: #0A014F;
+}
+
+
+.table-view {
+    -fx-background-color: #0A014F;
+    -fx-table-cell-border-color: transparent;
+}
+.table-view .column-header-background .filler {
+    -fx-background-color: #0A014F;
+    -fx-text-fill: white;
+}
+
+.table-column {
+    -fx-background-color: #0A014F;
+    -fx-text-fill: white;
+}
+
+.table-column-portfolios-name {
+    -fx-background-color: #0A014F;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER-LEFT;
+}
+.table-column-portfolios-value {
+    -fx-background-color: #0A014F;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER-RIGHT;
+}
+
+.table-view:focused .table-row-cell:focused {
+    -fx-border-color: derive(-fx-base, 20%);
+    -fx-background-insets: 0 0 0 0;
+    -fx-table-cell-border-color: transparent;
+}

@@ -1,0 +1,10 @@
+
+  ${AnsiColor.GREEN}_________               .__  ____   ____               __
+  ${AnsiColor.GREEN}\_   ___ \_____    _____|  |_\   \ /   /____   _______/  |_
+  ${AnsiColor.GREEN}/    \  \/\__  \  /  ___/  |  \   Y   // __ \ /  ___/\   __\
+  ${AnsiColor.GREEN}\     \____/ __ \_\___ \|   Y  \     /\  ___/ \___ \  |  |
+  ${AnsiColor.GREEN} \______  (____  /____  >___|  /\___/  \___  >____  > |__|
+  ${AnsiColor.GREEN}        \/     \/     \/     \/            \/     \/
+
+${AnsiColor.BRIGHT_BLUE}:: 💵 CashVest 💵  :: Running Spring Boot ${spring-boot.version} ::
+:: https://www.github.com/triippz/cashvest ::${AnsiColor.DEFAULT}

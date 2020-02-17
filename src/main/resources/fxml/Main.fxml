@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<!--
+  ~ Copyright 2020 Mark Tripoli
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+  ~ documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+  ~ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+  ~ persons to whom the Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  ~ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+  ~ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" styleClass="main" stylesheets="@../css/project.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.triippztech.cashvest.controllers.MainController">
+   <left>
+       <VBox fx:id="sidebar" alignment="TOP_CENTER" prefHeight="580.0" prefWidth="250.0" styleClass="sidebar" stylesheets="@../css/project.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+           <children>
+               <ImageView fx:id="userImage" fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" smooth="false">
+                   <image>
+                       <Image url="@../images/default-user.png" />
+                   </image>
+                   <VBox.margin>
+                       <Insets top="10.0" />
+                   </VBox.margin>
+               </ImageView>
+               <JFXButton fx:id="sideBarName" contentDisplay="RIGHT" ripplerFill="#e4dddd" styleClass="sidebar-user-btn">
+                   <font>
+                       <Font name="Calibri" size="14.0" />
+                   </font>
+               </JFXButton>
+               <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Main" textFill="#b8b1b1">
+                   <font>
+                       <Font size="20.0" />
+                   </font>
+                   <padding>
+                       <Insets left="10.0" />
+                   </padding>
+                   <VBox.margin>
+                       <Insets bottom="10.0" top="10.0" />
+                   </VBox.margin>
+               </Label>
+               <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
+                   <VBox.margin>
+                       <Insets />
+                   </VBox.margin>
+                   <padding>
+                       <Insets left="20.0" />
+                   </padding>
+                   <children>
+                       <Button fx:id="homeButton" mnemonicParsing="false" onAction="#routePageClick" styleClass="trans-button" stylesheets="@../css/project.css" text="Home" textFill="#b8b1b1">
+                           <graphic>
+                               <Glyph fontFamily="FontAwesome" icon="HOME" />
+                           </graphic>
+                           <HBox.margin>
+                               <Insets left="15.0" />
+                           </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Go Home" />
+                     </tooltip>
+                       </Button>
+                   </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="162.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
+                   <padding>
+                       <Insets left="20.0" />
+                   </padding>
+                   <children>
+                       <Button fx:id="portfolioButton" mnemonicParsing="false" onAction="#routePageClick" styleClass="trans-button" stylesheets="@../css/project.css" text="Manage Portfolios" textFill="#b8b1b1">
+                           <graphic>
+                               <Glyph fontFamily="FontAwesome" icon="CLIPBOARD" />
+                           </graphic>
+                           <HBox.margin>
+                               <Insets left="15.0" />
+                           </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="View your portfolios" />
+                     </tooltip>
+                       </Button>
+                   </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="232.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
+                   <padding>
+                       <Insets left="20.0" />
+                   </padding>
+                   <children>
+                       <Button fx:id="alertButton" mnemonicParsing="false" onAction="#routePageClick" styleClass="trans-button" stylesheets="@../css/project.css" text="Manage Alerts" textFill="#b8b1b1">
+                           <graphic>
+                               <Glyph fontFamily="FontAwesome" icon="BELL" />
+                           </graphic>
+                           <HBox.margin>
+                               <Insets left="15.0" />
+                           </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="View your alerts" />
+                     </tooltip>
+                       </Button>
+                   </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="162.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
+                   <padding>
+                       <Insets left="20.0" />
+                   </padding>
+                   <children>
+                       <Button fx:id="watchlistButton" mnemonicParsing="false" onAction="#routePageClick" styleClass="trans-button" stylesheets="@../css/project.css" text="Manage Watchlist" textFill="#b8b1b1">
+                           <graphic>
+                               <Glyph fontFamily="FontAwesome" icon="EYE" />
+                           </graphic>
+                           <HBox.margin>
+                               <Insets left="15.0" />
+                           </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="View your watchlists" />
+                     </tooltip>
+                       </Button>
+                   </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="164.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
+                   <padding>
+                       <Insets left="20.0" />
+                   </padding>
+                   <children>
+                       <Button fx:id="aboutButton" mnemonicParsing="false" onAction="#routePageClick" styleClass="trans-button" stylesheets="@../css/project.css" text="About" textFill="#b8b1b1">
+                           <graphic>
+                               <Glyph fontFamily="FontAwesome" icon="INFO_CIRCLE" />
+                           </graphic>
+                           <HBox.margin>
+                               <Insets left="15.0" />
+                           </HBox.margin>
+                       </Button>
+                   </children>
+               </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <children>
+                  <Button fx:id="signOutButton" mnemonicParsing="false" onAction="#onSignOut" styleClass="trans-button" stylesheets="@../css/project.css" text="Sign Out" textFill="#b8b1b1">
+                     <graphic>
+                        <Glyph fontFamily="FontAwesome" icon="SIGN_OUT" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+           </children>
+       </VBox>
+   </left>
+   <top>
+       <HBox fx:id="menubar" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="774.0" styleClass="navbar" stylesheets="@../css/project.css">
+           <children>
+               <JFXButton fx:id="menuSettingsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#openSidebar" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" styleClass="menu-bar-btns">
+                   <graphic>
+                       <Glyph fontFamily="FontAwesome" icon="BARS" />
+                   </graphic>
+               </JFXButton>
+               <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                   <children>
+<!--                  <ImageView fitHeight="36.0" fitWidth="48.0" pickOnBounds="true" smooth="false">-->
+<!--                     <image>-->
+<!--                        <Image url="@../images/default-user.png" />-->
+<!--                     </image>-->
+<!--                  </ImageView>-->
+                       <JFXButton fx:id="welcomeLabel" contentDisplay="CENTER" layoutX="442.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#editUser" prefHeight="50.0" prefWidth="294.0" ripplerFill="WHITE" styleClass="user-name-text" />
+                       <JFXButton fx:id="notificationButton" alignment="CENTER" contentDisplay="CENTER" layoutX="482.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" styleClass="menu-bar-btns">
+                     <graphic>
+                        <Glyph fontFamily="FontAwesome" icon="BELL" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Notifications" />
+                     </tooltip></JFXButton>
+                   </children>
+               </HBox>
+           </children>
+           <VBox.margin>
+               <Insets bottom="2.0" />
+           </VBox.margin>
+       </HBox>
+   </top>
+</BorderPane>

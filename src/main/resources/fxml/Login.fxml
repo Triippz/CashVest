@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--
+  ~ Copyright 2020 Mark Tripoli
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+  ~ documentation files (the "Software"), to deal in the Software without restriction, including without limitation the 
+  ~ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit 
+  ~ persons to whom the Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  ~ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+  ~ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/auth.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.triippztech.cashvest.controllers.LoginController">
+   <left>
+      <VBox fx:id="leftVBox" prefHeight="400.0" prefWidth="309.0" styleClass="left-box" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="left-header-label" text="Welcome to CashVest" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="40.0" top="80.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label prefHeight="68.0" prefWidth="189.0" styleClass="left-sub-header-label" text="Where investing, is made simple" textAlignment="CENTER" wrapText="true">
+               <VBox.margin>
+                  <Insets left="50.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="signUpButton" onAction="#onClick" styleClass="left-button" text="Sign Up">
+               <VBox.margin>
+                  <Insets left="110.0" top="60.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="rightVBox" prefHeight="200.0" prefWidth="341.0" styleClass="right-box" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="right-header-label" text="Login" textAlignment="CENTER">
+               <font>
+                  <Font size="33.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="110.0" top="70.0" />
+               </VBox.margin></Label>
+            <JFXTextField fx:id="userNameField" alignment="CENTER" prefWidth="222.0" promptText="Enter Your Username or Email" styleClass="text-field" unFocusColor="#150cc3">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="passwordField" alignment="CENTER" promptText="Enter Your Password" styleClass="text-field" unFocusColor="#150cc3">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font></JFXPasswordField>
+            <JFXButton fx:id="signInButton" onAction="#onClick" styleClass="right-button" text="Sign In">
+               <VBox.margin>
+                  <Insets left="110.0" top="40.0" />
+               </VBox.margin></JFXButton>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="600.0" textAlignment="CENTER" textFill="#ff0505" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
