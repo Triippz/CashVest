@@ -22,6 +22,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Asset is an abstract class, because we may in the future support
@@ -60,4 +61,15 @@ public abstract class Asset {
     protected abstract String getSymbolTag();
 
     protected abstract List<String> getNews();
+
+    protected String getStarRating() {
+        String[] stars = new String[]{
+                "⭐",
+                "⭐⭐",
+                "⭐⭐⭐",
+                "⭐⭐⭐⭐",
+                "⭐⭐⭐⭐⭐"
+        };
+        return stars [ new Random().nextInt( stars.length ) ];
+    }
 }

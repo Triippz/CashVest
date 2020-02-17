@@ -16,6 +16,8 @@
 
 package com.triippztech.cashvest.domain;
 
+import com.triippztech.cashvest.domain.enumeration.BuyRating;
+import com.triippztech.cashvest.interfaces.TestingInterface;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +27,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bond extends Asset implements Serializable {
+public class Bond extends Asset implements Serializable, TestingInterface {
 
     private static final long serialVersionUID = 1L;
 
@@ -62,4 +64,14 @@ public class Bond extends Asset implements Serializable {
         return news;
     }
 
+    @Override
+    public String assetRating() {
+        return this.getSymbolTag() + " has a star rating of " + this.getStarRating();
+    }
+
+    @Override
+    public String assetBuyRating() {
+        return this.getSymbolTag() + " is a: " + BuyRating.randomRating().getRating() + "\n According to the amateur market " +
+                "analyst, Mark Tripoli";
+    }
 }

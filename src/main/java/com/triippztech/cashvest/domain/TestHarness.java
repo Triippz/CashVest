@@ -16,12 +16,12 @@
 
 package com.triippztech.cashvest.domain;
 
+import com.triippztech.cashvest.interfaces.TestingInterface;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class TestHarness {
     private final Logger log = LoggerFactory.getLogger(TestHarness.class);
@@ -52,9 +52,23 @@ public class TestHarness {
         );
 
         this.arrayList = new ArrayList<>();
+        arrayList.add(
+                new Bond("U.S. 10 Year Treasury Note", "TMUBMUSD10Y")
+        );
+        arrayList.add(
+                new Stock("Tesla Inc.", "TSLA")
+        );
+        arrayList.add(
+                new Bond("Australia 9 Year Government Bond", "TMBMKAU-09Y")
+        );
+        arrayList.add(
+                new Stock("Apple Inc.", "AAPL")
+        );
+
         setUser();
         testPortfolio();
         testClassHierarchy();
+        testInterface();
     }
 
     private void setUser() {
@@ -130,5 +144,20 @@ public class TestHarness {
 
         for ( Asset asset : arrayList )
             log.warn(asset.getSymbolTag());
+    }
+
+    private void testInterface() {
+        ArrayList<Bond> bonds = new ArrayList<>();
+        bonds.add(
+                new Bond("U.S. 10 Year Treasury Note", "TMUBMUSD10Y")
+        );
+        bonds.add(
+                new Bond("Australia 9 Year Government Bond", "TMBMKAU-09Y")
+        );
+
+        for ( Bond bond : bonds ) {
+            log.warn(bond.assetRating());
+            log.warn(bond.assetBuyRating());
+        }
     }
 }

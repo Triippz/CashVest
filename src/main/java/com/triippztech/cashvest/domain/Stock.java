@@ -17,6 +17,8 @@
 package com.triippztech.cashvest.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.triippztech.cashvest.domain.enumeration.BuyRating;
+import com.triippztech.cashvest.interfaces.TestingInterface;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,10 +30,7 @@ import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * A Stock.
@@ -40,7 +39,7 @@ import java.util.Set;
 @EqualsAndHashCode(callSuper = false, exclude = {"transactions", "watchlists", "portfoliosIn", "priceAlerts"})
 @Table(name = "stock")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class Stock extends Asset implements Serializable {
+public class Stock extends Asset implements Serializable, TestingInterface {
 
     private static final long serialVersionUID = 1L;
 
@@ -253,5 +252,15 @@ public class Stock extends Asset implements Serializable {
         news.add("News 1 for Stocks");
         news.add("News 2 for Stocks");
         return news;
+    }
+
+    @Override
+    public String assetRating() {
+        return this.getSymbolTag() + " has a star rating of " + this.getStarRating();
+    }
+
+    @Override
+    public String assetBuyRating() {
+        return this.getSymbolTag() + " is a: " + BuyRating.randomRating().getRating() + "\n According to not a single expert";
     }
 }
